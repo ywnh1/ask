@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 use crate::Cli;
 use crate::consts::*;
 use figment::{

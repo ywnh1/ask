@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 use anyhow::{Result, ensure};
 use anytomd::{ConversionOptions, convert_file};
 use base64::prelude::*;

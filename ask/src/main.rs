@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 mod config;
 mod consts;
 mod format;
@@ -76,42 +77,44 @@ async fn main_process() -> Result<()> {
 
 #[derive(Debug, Parser)]
 #[command(version, name = "ask")]
-#[command(about = "A simple CLI tool which can be used to ask ai questions quickly", long_about = None)]
+#[command(
+    about = "Chat with AI from your terminal",
+    long_about = "A minimal CLI tool that lets you chat with AI models \
+(DeepSeek, OpenAI-compatible APIs) directly from your shell.\n\
+Supports streaming responses, conversation history, and file context \
+(plaintext, markdown, base64)."
+)]
 struct Cli {
-    /// The message you want to say to your AI.
-    /// It could be used like `ask What is Rust` or `ask "What is Rust"`.
+    /// Message to send to the AI
     msg: Vec<String>,
-    /// To send AI a plaintext.
-    /// It could be used like `ask What are the files about -f a.md`.
+    /// Attach a file as plaintext
     #[arg(short, long)]
     file: Vec<String>,
-    /// To send AI a file that can be turned into markdown.
-    /// It could be used like `ask What are the files about -F a.docx`.
+    /// Attach a file converted to markdown
     #[arg(short = 'F', long)]
     format: Vec<String>,
-    /// To send AI a file which will be turned into base64.
-    /// It could be used like `ask What is the picture about -b a.jpg`
+    /// Attach a file as base64
     #[arg(short, long)]
     base64: Vec<String>,
-    /// To disable the ai to read and write the history file.
+    /// Disable conversation history
     #[arg(short, long)]
     disable_history: bool,
-    /// To set url once.
+    /// Override the API URL
     #[arg(long)]
     url: Option<String>,
-    /// To set model once.
+    /// Override the model name
     #[arg(long)]
     model: Option<String>,
-    /// To set key once.
+    /// Override the API key
     #[arg(long)]
     key: Option<String>,
-    /// To set system prompt once.
+    /// Override the system prompt
     #[arg(long)]
     system_prompt: Option<String>,
-    /// To set history file's path once.
+    /// Override the history file path
     #[arg(long)]
     history_path: Option<String>,
-    /// To delete history file
+    /// Delete the history file
     #[arg(long)]
     clear_history: bool,
 }

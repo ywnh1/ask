@@ -1,1 +1,21 @@
-*/target
+# Rust build artifacts
+target/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Rust: keep Cargo.lock for application crates
+
+# Release output
+release/
+
+# Build tools
+appimagetool*

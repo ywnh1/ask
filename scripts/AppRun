@@ -1,0 +1,5 @@
+#!/bin/bash
+# AppRun — entry point for ask AppImage
+SELF="$(readlink -f "$0")"
+HERE="${SELF%/*}"
+exec "${HERE}/usr/bin/ask" "$@"

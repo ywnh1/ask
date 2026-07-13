@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=ask
+Comment=Chat with AI from your terminal
+Exec=ask
+Icon=ask
+Terminal=true
+Type=Application
+Categories=Utility;TerminalEmulator;
+StartupNotify=false
