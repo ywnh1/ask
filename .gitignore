@@ -19,3 +19,6 @@ release/
 
 # Build tools
 appimagetool*
+
+# Codewhale runtime state
+.codewhale/

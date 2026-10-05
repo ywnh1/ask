@@ -17,7 +17,7 @@
 
 ```bash
 # 安装 Rust 后：
-git clone https://github.com/yourusername/ask.git
+git clone https://github.com/ywnh1/ask.git
 cd ask/ask
 cargo build --release
 cp target/release/ask ~/.local/bin/
@@ -42,7 +42,7 @@ ask --help
 首次启动时，`ask` 会自动打开 `~/.config/ask/config.toml` 供你编辑：
 
 ```toml
-model = "deepseek-chat"
+model = "deepseek-flash"
 url = "https://api.deepseek.com/chat/completions"
 key = "sk-your-api-key"
 system_prompt = "You are a helpful AI."
@@ -52,7 +52,7 @@ history_path = "~/.ask_history"
 环境变量（前缀 `APP_`，以下划线分割）：
 
 ```bash
-export APP_MODEL="deepseek-chat"
+export APP_MODEL="deepseek-flash"
 export APP_KEY="sk-xxx"
 ```
 

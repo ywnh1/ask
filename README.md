@@ -17,7 +17,7 @@ Two crates, one tool:
 
 ```bash
 # Install Rust, then:
-git clone https://github.com/yourusername/ask.git
+git clone https://github.com/ywnh1/ask.git
 cd ask/ask
 cargo build --release
 cp target/release/ask ~/.local/bin/
@@ -42,7 +42,7 @@ ask --help
 On first launch, `ask` opens `~/.config/ask/config.toml` in your editor:
 
 ```toml
-model = "deepseek-chat"
+model = "deepseek-flash"
 url = "https://api.deepseek.com/chat/completions"
 key = "sk-your-api-key"
 system_prompt = "You are a helpful AI."
